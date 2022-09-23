@@ -66,8 +66,8 @@ module.exports = grammar({
     populated_shape_members: $ => seq(
       '{',
       $.shape_member_kvp,
-      repeat(seq(',', $.shape_member_kvp)),
       optional(','),
+      repeat(seq($.shape_member_kvp, optional(','))),
       '}'
     ),
     shape_member_kvp: $ => choice(
@@ -97,8 +97,8 @@ module.exports = grammar({
     populated_node_object: $ => seq(
       '{',
       $.node_object_kvp,
-      repeat(seq(',', $.node_object_kvp)),
       optional(','),
+      repeat(seq($.node_object_kvp, optional(','))),
       '}'
     ),
     node_object_kvp: $ => seq($.node_object_key, ':', $.node_value),
