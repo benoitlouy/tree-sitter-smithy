@@ -19,12 +19,7 @@
     }
   },
   {
-    "type": "comment",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "control_var_name",
+    "type": "apply_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -32,7 +27,145 @@
       "required": true,
       "types": [
         {
+          "type": "apply_statement_block",
+          "named": true
+        },
+        {
+          "type": "apply_statement_singular",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "apply_statement_block",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "shape_id",
+          "named": true
+        },
+        {
+          "type": "trait_statements",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "apply_statement_singular",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "shape_id",
+          "named": true
+        },
+        {
+          "type": "trait",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "comment",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "control_section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "control_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "control_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
           "type": "node_object_key",
+          "named": true
+        },
+        {
+          "type": "node_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "definition_section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "definition_statements",
+          "named": true
+        },
+        {
+          "type": "namespace_statement",
+          "named": true
+        },
+        {
+          "type": "use_section",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "definition_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "apply_statement",
+          "named": true
+        },
+        {
+          "type": "shape_statement",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "definition_statements",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "definition_statement",
           "named": true
         }
       ]
@@ -44,22 +177,22 @@
     "fields": {}
   },
   {
-    "type": "empty_node_array",
+    "type": "elided_member",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
   },
   {
-    "type": "empty_node_object",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "empty_shape_members",
-    "named": true,
-    "fields": {}
-  },
-  {
-    "type": "list_shape_statement",
+    "type": "enum_member",
     "named": true,
     "fields": {},
     "children": {
@@ -68,6 +201,126 @@
       "types": [
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "value_assignment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_members",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "enum_member",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_shape_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "enum_members",
+          "named": true
+        },
+        {
+          "type": "enum_type_name",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "mixins",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "enum_type_name",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "explicit_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "shape_id",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "inline_structure",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "mixins",
+          "named": true
+        },
+        {
+          "type": "shape_members_with_assignment",
+          "named": true
+        },
+        {
+          "type": "structure_resource",
+          "named": true
+        },
+        {
+          "type": "trait_statements",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "list_statement",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "list_type_name",
+          "named": true
+        },
+        {
+          "type": "mixins",
           "named": true
         },
         {
@@ -78,7 +331,12 @@
     }
   },
   {
-    "type": "map_shape_statement",
+    "type": "list_type_name",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "map_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -90,7 +348,26 @@
           "named": true
         },
         {
+          "type": "mixins",
+          "named": true
+        },
+        {
           "type": "shape_members",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "metadata_section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "metadata_statement",
           "named": true
         }
       ]
@@ -105,11 +382,26 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "node_object_key",
           "named": true
         },
         {
           "type": "node_value",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "mixins",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "shape_id",
           "named": true
         }
       ]
@@ -150,15 +442,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
+      "multiple": true,
+      "required": false,
       "types": [
         {
-          "type": "empty_node_array",
-          "named": true
-        },
-        {
-          "type": "populated_node_array",
+          "type": "node_value",
           "named": true
         }
       ]
@@ -169,15 +457,11 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
+      "multiple": true,
+      "required": false,
       "types": [
         {
-          "type": "empty_node_object",
-          "named": true
-        },
-        {
-          "type": "populated_node_object",
+          "type": "node_object_kvp",
           "named": true
         }
       ]
@@ -276,7 +560,45 @@
     }
   },
   {
-    "type": "operation_shape_statement",
+    "type": "operation_body",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "operation_member",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "operation_member",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "explicit_member",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "inline_structure",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "operation_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -288,78 +610,18 @@
           "named": true
         },
         {
-          "type": "node_object",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "populated_node_array",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "node_value",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "populated_node_object",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "node_object_kvp",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "populated_shape_members",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "shape_member_kvp",
-          "named": true
-        }
-      ]
-    }
-  },
-  {
-    "type": "preamble",
-    "named": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": true,
-      "types": [
-        {
-          "type": "metadata_statement",
+          "type": "mixins",
           "named": true
         },
         {
-          "type": "namespace_statement",
+          "type": "operation_body",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "resource_shape_statement",
+    "type": "resource_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -368,6 +630,10 @@
       "types": [
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "mixins",
           "named": true
         },
         {
@@ -397,7 +663,7 @@
     }
   },
   {
-    "type": "service_shape_statement",
+    "type": "service_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -406,6 +672,10 @@
       "types": [
         {
           "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "mixins",
           "named": true
         },
         {
@@ -416,19 +686,47 @@
     }
   },
   {
-    "type": "set_shape_statement",
+    "type": "shape_body",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "enum_shape_statement",
           "named": true
         },
         {
-          "type": "shape_members",
+          "type": "list_statement",
+          "named": true
+        },
+        {
+          "type": "map_statement",
+          "named": true
+        },
+        {
+          "type": "operation_statement",
+          "named": true
+        },
+        {
+          "type": "resource_statement",
+          "named": true
+        },
+        {
+          "type": "service_statement",
+          "named": true
+        },
+        {
+          "type": "simple_shape_statement",
+          "named": true
+        },
+        {
+          "type": "structure_statement",
+          "named": true
+        },
+        {
+          "type": "union_statement",
           "named": true
         }
       ]
@@ -469,7 +767,7 @@
     }
   },
   {
-    "type": "shape_member_kvp",
+    "type": "shape_member",
     "named": true,
     "fields": {},
     "children": {
@@ -477,11 +775,11 @@
       "required": true,
       "types": [
         {
-          "type": "identifier",
+          "type": "elided_member",
           "named": true
         },
         {
-          "type": "shape_id",
+          "type": "explicit_member",
           "named": true
         },
         {
@@ -492,19 +790,57 @@
     }
   },
   {
+    "type": "shape_member_with_assignment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "elided_member",
+          "named": true
+        },
+        {
+          "type": "explicit_member",
+          "named": true
+        },
+        {
+          "type": "trait_statements",
+          "named": true
+        },
+        {
+          "type": "value_assignment",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "shape_members",
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
-      "required": true,
+      "multiple": true,
+      "required": false,
       "types": [
         {
-          "type": "empty_shape_members",
+          "type": "shape_member",
           "named": true
-        },
+        }
+      ]
+    }
+  },
+  {
+    "type": "shape_members_with_assignment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
         {
-          "type": "populated_shape_members",
+          "type": "shape_member_with_assignment",
           "named": true
         }
       ]
@@ -515,43 +851,15 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
         {
-          "type": "list_shape_statement",
+          "type": "shape_body",
           "named": true
         },
         {
-          "type": "map_shape_statement",
-          "named": true
-        },
-        {
-          "type": "operation_shape_statement",
-          "named": true
-        },
-        {
-          "type": "resource_shape_statement",
-          "named": true
-        },
-        {
-          "type": "service_shape_statement",
-          "named": true
-        },
-        {
-          "type": "set_shape_statement",
-          "named": true
-        },
-        {
-          "type": "simple_shape_statement",
-          "named": true
-        },
-        {
-          "type": "structure_shape_statement",
-          "named": true
-        },
-        {
-          "type": "union_shape_statement",
+          "type": "trait_statements",
           "named": true
         }
       ]
@@ -570,6 +878,10 @@
           "named": true
         },
         {
+          "type": "mixins",
+          "named": true
+        },
+        {
           "type": "simple_type_name",
           "named": true
         }
@@ -582,29 +894,40 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
-          "type": "preamble",
+          "type": "control_section",
           "named": true
         },
         {
-          "type": "shape_statement",
+          "type": "definition_section",
           "named": true
         },
         {
-          "type": "trait_statements",
-          "named": true
-        },
-        {
-          "type": "use_statement",
+          "type": "metadata_section",
           "named": true
         }
       ]
     }
   },
   {
-    "type": "structure_shape_statement",
+    "type": "structure_resource",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "shape_id",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "structure_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -616,7 +939,15 @@
           "named": true
         },
         {
-          "type": "shape_members",
+          "type": "mixins",
+          "named": true
+        },
+        {
+          "type": "shape_members_with_assignment",
+          "named": true
+        },
+        {
+          "type": "structure_resource",
           "named": true
         }
       ]
@@ -647,7 +978,7 @@
     "fields": {},
     "children": {
       "multiple": false,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "trait_body_value",
@@ -725,7 +1056,7 @@
     }
   },
   {
-    "type": "union_shape_statement",
+    "type": "union_statement",
     "named": true,
     "fields": {},
     "children": {
@@ -737,7 +1068,26 @@
           "named": true
         },
         {
+          "type": "mixins",
+          "named": true
+        },
+        {
           "type": "shape_members",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "use_section",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "use_statement",
           "named": true
         }
       ]
@@ -753,6 +1103,21 @@
       "types": [
         {
           "type": "absolute_root_shape_id",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "value_assignment",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "node_value",
           "named": true
         }
       ]
@@ -775,10 +1140,6 @@
     "named": false
   },
   {
-    "type": ",",
-    "named": false
-  },
-  {
     "type": ".",
     "named": false
   },
@@ -792,6 +1153,10 @@
   },
   {
     "type": ":",
+    "named": false
+  },
+  {
+    "type": ":=",
     "named": false
   },
   {
@@ -815,8 +1180,20 @@
     "named": false
   },
   {
+    "type": "enum",
+    "named": false
+  },
+  {
+    "type": "for",
+    "named": false
+  },
+  {
     "type": "identifier",
     "named": true
+  },
+  {
+    "type": "intEnum",
+    "named": false
   },
   {
     "type": "list",
@@ -880,6 +1257,10 @@
   },
   {
     "type": "use",
+    "named": false
+  },
+  {
+    "type": "with",
     "named": false
   },
   {
