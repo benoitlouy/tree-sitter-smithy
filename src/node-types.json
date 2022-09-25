@@ -575,6 +575,21 @@
     }
   },
   {
+    "type": "operation_errors",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "identifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "operation_member",
     "named": true,
     "fields": {},
@@ -592,6 +607,10 @@
         },
         {
           "type": "inline_structure",
+          "named": true
+        },
+        {
+          "type": "operation_errors",
           "named": true
         }
       ]
