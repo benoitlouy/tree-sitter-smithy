@@ -817,7 +817,7 @@
           "type": "REPEAT",
           "content": {
             "type": "SYMBOL",
-            "name": "identifier"
+            "name": "operation_error"
           }
         },
         {
@@ -825,6 +825,10 @@
           "value": "]"
         }
       ]
+    },
+    "operation_error": {
+      "type": "SYMBOL",
+      "name": "identifier"
     },
     "inline_structure": {
       "type": "SEQ",
